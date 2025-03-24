@@ -11,7 +11,7 @@ class Post < ApplicationRecord
   scope :draft, -> { where(status: "draft") }
   scope :popular, -> { where("view_count > ?", 1000) }
 
-  enum status: { draft: 0, published: 1, archived: 2 }
+  enum :status, { draft: 0, published: 1, archived: 2 }
 
   attribute :status, :integer, default: 0  # Sets default to 'draft'
 
