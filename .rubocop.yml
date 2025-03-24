@@ -13,6 +13,14 @@ require:
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.2.6  # Change to your Ruby version
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
 
 # Example formatting rules
 Layout/LineLength:
@@ -20,3 +28,7 @@ Layout/LineLength:
 
 Style/Documentation:
   Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
