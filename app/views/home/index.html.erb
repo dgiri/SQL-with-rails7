@@ -1,0 +1,25 @@
+<div class="header-container">
+  <h1 class="page-title">Some posts</h1>
+  <div class="status-filters">
+    <% Post.statuses.each do |status| %>
+      <%= link_to "#{status[0].humanize} (#{Post.where(status: status[1]).count})",
+          root_path(status: status[0]),
+          class: "status-tag #{params[:status] == status[0] ? 'active' : ''}" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="posts-grid">
+  <% @posts.each do |post| %>
+    <%= render partial: "home/post_card", locals: { post: post } %>
+  <% end %>
+</div>
+
+<div class="pagination">
+  <%= will_paginate @posts,
+    previous_label: '← Previous',
+    next_label: 'Next →',
+    inner_window: 2,
+    outer_window: 1
+  %>
+</div>

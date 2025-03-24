@@ -1,0 +1,23 @@
+<div class="post-card" style="height: 250px; display: flex; flex-direction: column;">
+  <div class="post-header">
+    <div style="max-height: 100px; overflow-y: auto;">
+      <h2 class="post-title"><%= post.title %></h2>
+    </div>
+    <div class="post-meta">
+      <span class="post-view-count">Views: <%= post.view_count %></span>
+      <span class="post-status <%= Post.statuses.key(post.status) %>">
+        <%= Post.statuses.key(post.status)&.capitalize %>
+      </span>
+    </div>
+  </div>
+
+  <div style="flex: 1; overflow-y: auto;">
+    <p class="post-content"><%= post.content %></p>
+  </div>
+
+  <div class="post-tags">
+    <% post.tags.each do |tag| %>
+      <span class="tag"><%= tag %></span>
+    <% end %>
+  </div>
+</div>

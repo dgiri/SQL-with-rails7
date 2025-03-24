@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  post: one
+  content: MyText
+  approved: false
+  upvotes: 1
+  downvotes: 1
+  parent: one
+
+two:
+  user: two
+  post: two
+  content: MyText
+  approved: false
+  upvotes: 1
+  downvotes: 1
+  parent: two

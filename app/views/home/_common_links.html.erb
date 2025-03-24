@@ -1,0 +1,9 @@
+<%= link_to users_path(filter: 'active_users'), class: "nav-item" do %>
+  <i class="fas fa-users"></i>
+  <span>1. Find active users with high login counts</span>
+<% end %>
+
+<%= link_to view_posts_path(tags: 'News'), class: "nav-item" do %>
+  <i class="fas fa-users"></i>
+  <span>2. Find posts with specific tags like news</span>
+<% end %>
